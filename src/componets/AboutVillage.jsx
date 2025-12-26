@@ -1,3 +1,5 @@
+import AttractionCard from "./AttractionCard";
+
 export default function AboutVillage() {
     return (
         <>
@@ -33,56 +35,60 @@ export default function AboutVillage() {
                 </h2>
 
                 <div className="grid md:grid-cols-3 gap-8">
-                    {/* Карта 1 */}
-                    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md dark:shadow-none p-6 transition-colors duration-300">
-                        <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
-                            Язовир Кърджали
-                        </h3>
-                        <img
-                            src="/images/attractions/Язовир Кърджали.jpg"
-                            alt="Язовир Кърджали"
-                            className="rounded-2xl object-cover h-48 w-full mb-2"
-                        />
-                        <p className="text-gray-700 dark:text-gray-300">
-                            Подходящ за риболов, лодки, каяк и разходки край
-                            водата с впечатляващи гледки.
-                        </p>
-                    </div>
+                    <AttractionCard
+                        title={"Язовир Кърджали"}
+                        img={"/images/attractions/Язовир Кърджали.jpg"}
+                        description={
+                            " Подходящ за риболов, лодки, каяк и разходки край водата с впечатляващи гледки. "
+                        }
+                    />
 
-                    {/* Карта 2 */}
-                    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md dark:shadow-none p-6 transition-colors duration-300">
-                        <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
-                            Перперикон
-                        </h3>
-                        <img
-                            src="/images/attractions/perpirikon.jpg"
-                            alt="Перперикон"
-                            className="rounded-2xl object-cover h-48 w-full mb-2"
-                        />
-                        <p className="text-gray-700 dark:text-gray-300">
-                            Древен скален град и археологически комплекс, едно
-                            от най-значимите исторически места в България.
-                        </p>
-                    </div>
+                    <AttractionCard
+                        title={"Перперикон"}
+                        img={"/images/attractions/perpirikon.jpg"}
+                        description={
+                            "Древен скален град и археологически комплекс, едно от най-значимите исторически места в България."
+                        }
+                    />
 
-                    {/* Карта 3 */}
-                    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md dark:shadow-none p-6 transition-colors duration-300">
-                        <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
-                            Каменните гъби
-                        </h3>
-                        <img
-                            src="/images/attractions/kamennite-gybi-ahrida.jpg"
-                            alt="Каменните гъби"
-                            className="rounded-2xl object-cover h-48 w-full mb-2"
-                        />
-                        <p className="text-gray-700 dark:text-gray-300">
-                            Уникален природен феномен със скални образувания,
-                            подходящ за кратки разходки и снимки.
-                        </p>
-                    </div>
-
-                    {/* Останалите карти се правят по същия начин */}
+                    <AttractionCard
+                        title={"Каменните гъби"}
+                        img={"/images/attractions/kamennite-gybi-ahrida.jpg"}
+                        description={
+                            "Уникален природен феномен със скални образувани подходящ за кратки разходки и снимки."
+                        }
+                    />
+                    <AttractionCard
+                        title={"Маказа – Гърция"}
+                        img={"/images/attractions/makaza.jpg"}
+                        description={
+                            "Граничният пункт Маказа свързва Родопите с Егейскотокрайбрежие на Гърция и е една от най-популярните туристически връзки между България и южната ни съседка, предлагаща бърз достъп до морето, живописни планински пейзажи и разнообразни възможности за отдих."
+                        }
+                    />
+                    <AttractionCard
+                        title={"Каменната сватба"}
+                        img={"/images/attractions/Каменна сватба.jpg"}
+                        description={
+                            "  Природна забележителност със скални фигури и интересна легенда, разположена край село Зимзелен."
+                        }
+                    />
+                    <AttractionCard
+                        title={"Манастир „Св. Йоан Продром“"}
+                        img={
+                            "/images/attractions/ukrepen-manastir-sv-joan-prodrom.png"
+                        }
+                        description={
+                            "  Духовно средище с вековна история, разположено сред тишината и красотата на Източните Родопи. Манастирът впечатлява със спокойствие, уникална атмосфера и аязмо със свещена вода с лечебна сила."
+                        }
+                    />
                 </div>
+                <AttractionCard
+                    title={"Въжен мост с. Сухово"}
+                    img={"/images/attractions/vyjen-most-2.jpg"}
+                    description={
+                        " Една от най-атрактивните забележителности в района на Кърджали. Въженият мост предлага вълнуваща разходка над реката и красиви панорамни гледки към природата на Родопите."
+                    }
+                />
             </section>
         </>
     );

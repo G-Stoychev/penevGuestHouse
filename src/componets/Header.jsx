@@ -9,7 +9,6 @@ export default function Header() {
     return (
         <header className="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm dark:bg-gray-900/90 dark:shadow-md">
             <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-                {/* LOGO */}
                 <NavLink
                     to="/"
                     className="text-2xl font-bold tracking-wide dark:text-white"
@@ -44,7 +43,6 @@ export default function Header() {
                     {isDark ? <Moon /> : <Sun />}
                 </button>
 
-                {/* DESKTOP NAV */}
                 <nav className="hidden md:flex gap-8 text-sm font-medium">
                     <NavLink
                         to="/"
@@ -84,7 +82,6 @@ export default function Header() {
                     </NavLink>
                 </nav>
 
-                {/* PHONE DESKTOP */}
                 <div className="hidden md:flex items-center gap-4">
                     <a
                         href="tel:+359883208308"
@@ -110,7 +107,6 @@ export default function Header() {
                     {isDark ? <Moon /> : <Sun />}
                 </button>
 
-                {/* MOBILE HAMBURGER */}
                 <button
                     className="md:hidden text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white"
                     onClick={() => setMobileOpen(!mobileOpen)}
@@ -119,7 +115,6 @@ export default function Header() {
                 </button>
             </div>
 
-            {/* MOBILE MENU */}
             {mobileOpen && (
                 <div className="md:hidden bg-white shadow-lg dark:bg-gray-900 dark:shadow-md">
                     <nav className="flex flex-col gap-2 px-4 py-4 border-b dark:border-gray-700">

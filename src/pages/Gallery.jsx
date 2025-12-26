@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { X, Home, Mountain } from "lucide-react";
 
-/* ==============================
-   VITE GLOB IMPORTS (LITERALS)
-================================ */
 const attractionsImages = Object.values(
     import.meta.glob("../images/attractions/*.{jpg,jpeg,png,webp}", {
         eager: true,
@@ -22,9 +19,6 @@ const house2Images = Object.values(
     })
 ).map((img) => img.default);
 
-/* ==============================
-   GALLERIES MAP
-================================ */
 const galleries = {
     attractions: attractionsImages,
     houses: [...house1Images, ...house2Images],
@@ -48,7 +42,6 @@ export default function Gallery() {
                 </p>
             </div>
 
-            {/* CATEGORY SELECTOR */}
             <div className="flex justify-center gap-4 mb-12 flex-wrap">
                 <CategoryButton
                     active={activeCategory === "attractions"}
@@ -64,7 +57,6 @@ export default function Gallery() {
                 />
             </div>
 
-            {/* GALLERY GRID */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {imagesToShow.map((src, i) => (
                     <button
@@ -83,7 +75,6 @@ export default function Gallery() {
                 ))}
             </div>
 
-            {/* MODAL */}
             {activeImage && (
                 <div className="fixed inset-0 bg-black/80 dark:bg-black/90 z-50 flex items-center justify-center px-4 transition-colors duration-300">
                     <button
@@ -103,9 +94,6 @@ export default function Gallery() {
     );
 }
 
-/* ==============================
-   Category Button
-================================ */
 function CategoryButton({ active, onClick, icon, label }) {
     return (
         <button

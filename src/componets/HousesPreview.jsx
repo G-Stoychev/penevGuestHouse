@@ -42,7 +42,6 @@ export default function HousesPreview() {
                     </p>
                 </div>
 
-                {/* Ако искаш, можеш да включиш и удобствата с иконите */}
                 {/* <div className="max-w-5xl mx-auto my-5 text-gray-700 dark:text-gray-300">...</div> */}
 
                 <div className="grid md:grid-cols-2 gap-8 mt-10">

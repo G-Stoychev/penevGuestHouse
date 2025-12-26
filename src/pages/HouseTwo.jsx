@@ -28,10 +28,7 @@ import {
 
 import ImagePreview from "../componets/ImagePreview";
 import ImageModal from "../componets/ImageModal";
-import CallToAction from "../componets/Footer";
 
-/* ================= LOAD IMAGES ================= */
-// Статичен glob – всички снимки от house2 рекурсивно
 const allImages = import.meta.glob(
     "../images/house2/**/*.{jpg,jpeg,png,webp}",
     { eager: true }
@@ -39,7 +36,6 @@ const allImages = import.meta.glob(
 
 const allImagesArray = Object.values(allImages).map((img) => img.default);
 
-// Взимаме само снимките за секция
 const loadImagesBySection = (sectionId) =>
     Object.entries(allImages)
         .filter(([path]) =>
@@ -47,7 +43,6 @@ const loadImagesBySection = (sectionId) =>
         )
         .map(([, img]) => img.default);
 
-/* ================= SECTIONS ================= */
 const sections = [
     {
         id: "living",
@@ -134,7 +129,6 @@ const sections = [
     },
 ];
 
-/* ================= MAIN COMPONENT ================= */
 export default function HouseOne() {
     const [active, setActive] = useState("living");
     const location = useLocation();
@@ -213,7 +207,6 @@ export default function HouseOne() {
                 </nav>
             </aside>
 
-            {/* MOBILE BOTTOM NAV */}
             <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white dark:bg-gray-800 border-t dark:border-gray-700">
                 <div
                     className="flex gap-2 px-4 py-3 overflow-x-auto scroll-smooth"
@@ -243,9 +236,7 @@ export default function HouseOne() {
                 </div>
             </nav>
 
-            {/* CONTENT */}
             <main className="flex-1 space-y-24 ">
-                {/* TITLE + INFO */}
                 <section className="space-y-10">
                     <div>
                         <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
@@ -278,7 +269,6 @@ export default function HouseOne() {
                     </div>
                 </section>
 
-                {/* AMENITIES */}
                 <section className="space-y-12">
                     <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">
                         Удобства
@@ -307,7 +297,6 @@ export default function HouseOne() {
                     />
                 </section>
 
-                {/* ROOMS */}
                 {sections.map((s) => (
                     <RoomSection key={s.id} {...s} />
                 ))}
@@ -316,7 +305,6 @@ export default function HouseOne() {
     );
 }
 
-/* ================= HELPERS ================= */
 function Info({ icon, text }) {
     return (
         <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">

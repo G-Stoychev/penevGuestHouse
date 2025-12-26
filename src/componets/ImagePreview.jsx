@@ -7,7 +7,7 @@ export default function ImagePreview({ src, alt, onClick }) {
     const handleMouseEnter = () => {
         timerRef.current = setTimeout(() => {
             setShowPreview(true);
-        }, 1100); // ⏱ 1.1 секунди
+        }, 1100);
     };
 
     const handleMouseLeave = () => {
@@ -28,7 +28,6 @@ export default function ImagePreview({ src, alt, onClick }) {
                 className="rounded-2xl object-cover h-40 w-full transition-shadow duration-300"
             />
 
-            {/* DELAYED HOVER PREVIEW */}
             {showPreview && (
                 <div
                     className="

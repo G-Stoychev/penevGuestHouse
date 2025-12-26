@@ -3,7 +3,6 @@ export default function Footer() {
         <footer className="bg-black text-white py-10">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-center">
-                    {/* Бранд */}
                     <div className="text-center md:text-left">
                         <h3 className="text-2xl font-bold">
                             Penev Guest House
@@ -13,7 +12,6 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    {/* Контакт */}
                     <div className="text-center md:text-left text-sm text-gray-300 space-y-1">
                         <p>📍 с.Главатарци, България</p>
                         <p>
@@ -28,7 +26,6 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    {/* Социални */}
                     <div className="text-center md:text-left text-sm">
                         <p className="mb-1 text-gray-400">Последвай ни</p>
                         <div className="flex justify-center md:justify-start gap-4">
@@ -59,7 +56,6 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* ТВОИТЕ бутони */}
                     <div className="flex justify-center md:justify-end gap-2">
                         <a
                             href="tel:+359883208308"
@@ -76,7 +72,6 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Долен ред */}
                 <div className="border-t border-white/10 mt-8 pt-4 text-xs text-gray-500 flex flex-col md:flex-row justify-between items-center gap-2">
                     <span>© {new Date().getFullYear()} Penev GuestHouse</span>
                 </div>

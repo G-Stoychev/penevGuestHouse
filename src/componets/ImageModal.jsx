@@ -41,7 +41,6 @@ export default function ImageModal({ images, activeIndex, setActiveIndex }) {
             onTouchMove={handleTouchMove}
         >
             <div className="relative" onClick={(e) => e.stopPropagation()}>
-                {/* Close button */}
                 <button
                     onClick={handleClose}
                     className="absolute -top-12 right-0 text-white dark:text-gray-200 hover:opacity-70 transition-opacity duration-200"
@@ -49,7 +48,6 @@ export default function ImageModal({ images, activeIndex, setActiveIndex }) {
                     <X size={32} />
                 </button>
 
-                {/* Navigation arrows */}
                 <button
                     onClick={swipePrev}
                     className="absolute left-0 top-1/2 -translate-y-1/2 text-white dark:text-gray-200 p-4 hover:opacity-70 transition-opacity duration-200"

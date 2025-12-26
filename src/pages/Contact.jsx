@@ -3,7 +3,6 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 export default function Contacts() {
     return (
         <div className="max-w-7xl mx-auto px-4 py-16 transition-colors duration-300">
-            {/* TITLE */}
             <section className="text-center mb-16">
                 <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
                     Контакти
@@ -15,7 +14,6 @@ export default function Contacts() {
             </section>
 
             <div className="grid lg:grid-cols-2 gap-16 items-start">
-                {/* CONTACT INFO */}
                 <section className="space-y-8">
                     <div className="flex items-start gap-4">
                         <MapPin className="w-6 h-6 text-gray-900 dark:text-white" />
@@ -69,7 +67,6 @@ export default function Contacts() {
                     </div>
                 </section>
 
-                {/* CONTACT FORM */}
                 {/* <section className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-sm">
                     <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
                         Изпратете ни съобщение
@@ -100,7 +97,6 @@ export default function Contacts() {
                 </section> */}
             </div>
 
-            {/* MAP */}
             <section className="mt-20">
                 <h2 className="text-2xl font-semibold mb-6 text-center text-gray-900 dark:text-white">
                     Как да ни намерите

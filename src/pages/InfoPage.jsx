@@ -6,7 +6,6 @@ export default function PricesInfo() {
                     Цени и Информация
                 </h1>
 
-                {/* PRICES */}
                 <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-8 mb-10 transition-colors duration-300">
                     <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
                         Цени за нощувка
@@ -34,7 +33,6 @@ export default function PricesInfo() {
                     </p>
                 </div>
 
-                {/* CHECK-IN / CHECK-OUT */}
                 <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-8 mb-10 transition-colors duration-300">
                     <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
                         Настаняване и Напускане
@@ -63,7 +61,6 @@ export default function PricesInfo() {
                     </div>
                 </div>
 
-                {/* ADDITIONAL INFO */}
                 <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-8 transition-colors duration-300">
                     <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
                         Допълнителна информация
