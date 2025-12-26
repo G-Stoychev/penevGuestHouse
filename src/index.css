@@ -6,7 +6,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Премахване на скролбар */
 .no-scrollbar::-webkit-scrollbar {
     display: none;
 }
@@ -14,14 +13,4 @@ html {
 .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
-}
-
-/* Светъл режим по подразбиране */
-body {
-    @apply bg-white text-gray-900;
-}
-
-/* Тъмен режим */
-body.dark {
-    @apply bg-gray-900 text-gray-200;
 }
