@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X, Share2, Moon, Sun } from "lucide-react";
+import { toggleTheme } from "../theme";
 
 export default function Header() {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -35,7 +36,7 @@ export default function Header() {
                 </button>
                 <button
                     onClick={() => {
-                        document.documentElement.classList.toggle("dark");
+                        toggleTheme();
                         setIsDark(!isDark);
                     }}
                     className="hidden ml-4 p-2  bg-transparent hover:text-black    dark:text-gray-300 dark:hover:text-white rounded"
