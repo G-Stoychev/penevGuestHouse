@@ -32,7 +32,6 @@ export default function Gallery() {
 
     return (
         <section className="max-w-7xl mx-auto px-4 py-16 transition-colors duration-300">
-            {/* TITLE */}
             <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
                     Галерия
