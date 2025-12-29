@@ -34,8 +34,6 @@ const allImages = import.meta.glob(
     { eager: true }
 );
 
-const allImagesArray = Object.values(allImages).map((img) => img.default);
-
 const loadImagesBySection = (sectionId) =>
     Object.entries(allImages)
         .filter(([path]) =>
@@ -61,7 +59,6 @@ const sections = [
         label: "Спалня 1",
         description:
             "Просторна спалня с екстра голямо двойно легло и внимателно подбран интериор, създаващ усещане за стил и домашен уют.",
-
         icon: <Bed size={16} />,
         descriptionIcons: [
             <BedDouble size={18} />,
@@ -77,7 +74,6 @@ const sections = [
         label: "Спалня 2",
         description:
             "Комфортна спалня с голямо двойно легло и спокойна атмосфера, осигуряваща идеални условия за пълноценна почивка и релакс.",
-
         icon: <BedDouble size={16} />,
         descriptionIcons: [
             <BedDouble size={18} />,
@@ -116,7 +112,6 @@ const sections = [
             <Sunset size={18} />,
             <Mountain size={18} />,
             <Home size={18} />,
-            <Coffee size={18} />,
         ],
     },
     {
@@ -129,10 +124,13 @@ const sections = [
     },
 ];
 
+const houseOneSections = [...sections];
+
 export default function HouseOne() {
-    const [active, setActive] = useState("living");
+    const [houseOneActiveSection, setHouseOneActiveSection] =
+        useState("living");
     const location = useLocation();
-    const linksRef = useRef({});
+    const houseOneNavRefs = useRef({});
 
     useEffect(() => {
         if (location.hash) {
@@ -144,32 +142,34 @@ export default function HouseOne() {
     }, [location]);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
+        const houseOneObserver = new IntersectionObserver(
             (entries) =>
                 entries.forEach(
                     (entry) =>
-                        entry.isIntersecting && setActive(entry.target.id)
+                        entry.isIntersecting &&
+                        setHouseOneActiveSection(entry.target.id)
                 ),
             { rootMargin: "-40% 0px -50% 0px" }
         );
 
-        sections.forEach((s) => {
+        houseOneSections.forEach((s) => {
             const el = document.getElementById(s.id);
-            el && observer.observe(el);
+            el && houseOneObserver.observe(el);
         });
 
-        return () => observer.disconnect();
+        return () => houseOneObserver.disconnect();
     }, []);
 
     useEffect(() => {
-        linksRef.current[active]?.scrollIntoView({
+        houseOneNavRefs.current[houseOneActiveSection]?.scrollIntoView({
             behavior: "smooth",
             inline: "center",
         });
-    }, [active]);
+    }, [houseOneActiveSection]);
+
     useEffect(() => {
-        const el = linksRef.current[active];
-        const container = linksRef.current.container;
+        const el = houseOneNavRefs.current[houseOneActiveSection];
+        const container = houseOneNavRefs.current.container;
 
         if (!el || !container) return;
 
@@ -180,24 +180,22 @@ export default function HouseOne() {
             left: elCenter - containerCenter,
             behavior: "smooth",
         });
-    }, [active]);
+    }, [houseOneActiveSection]);
 
     return (
         <div className="max-w-7xl mx-auto px-4 py-12 flex gap-10 text-gray-900 dark:text-gray-200">
+            {/* DESKTOP ASIDE */}
             <aside className="hidden lg:block w-64 sticky top-28 h-fit">
                 <nav className="space-y-2 text-sm">
-                    {sections.map((s) => (
+                    {houseOneSections.map((s) => (
                         <a
                             key={s.id}
                             href={`#${s.id}`}
-                            className={`
-                        flex items-center gap-2 px-3 py-2 rounded-lg transition
-                        ${
-                            active === s.id
-                                ? "bg-black text-white dark:bg-white dark:text-black"
-                                : "hover:bg-gray-100 dark:hover:bg-gray-700"
-                        }
-                    `}
+                            className={`flex items-center gap-2 px-3 py-2 rounded-lg transition ${
+                                houseOneActiveSection === s.id
+                                    ? "bg-black text-white dark:bg-white dark:text-black"
+                                    : "hover:bg-gray-100 dark:hover:bg-gray-700"
+                            }`}
                         >
                             {s.icon}
                             {s.label}
@@ -206,27 +204,22 @@ export default function HouseOne() {
                 </nav>
             </aside>
 
+            {/* MOBILE NAV */}
             <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white dark:bg-gray-800 border-t dark:border-gray-700">
                 <div
                     className="flex gap-2 px-4 py-3 overflow-x-auto scroll-smooth"
-                    ref={(el) => (linksRef.current.container = el)}
+                    ref={(el) => (houseOneNavRefs.current.container = el)}
                 >
-                    {sections.map((s) => (
+                    {houseOneSections.map((s) => (
                         <a
                             key={s.id}
                             href={`#${s.id}`}
-                            ref={(el) => (linksRef.current[s.id] = el)}
-                            className={`
-                        flex items-center gap-2
-                        whitespace-nowrap
-                        px-4 py-2 rounded-lg text-sm
-                        transition
-                        ${
-                            active === s.id
-                                ? "bg-black text-white dark:bg-white dark:text-black"
-                                : "bg-gray-100 dark:bg-gray-700"
-                        }
-                    `}
+                            ref={(el) => (houseOneNavRefs.current[s.id] = el)}
+                            className={`flex items-center gap-2 whitespace-nowrap px-4 py-2 rounded-lg text-sm transition ${
+                                houseOneActiveSection === s.id
+                                    ? "bg-black text-white dark:bg-white dark:text-black"
+                                    : "bg-gray-100 dark:bg-gray-700"
+                            }`}
                         >
                             {s.icon}
                             {s.label}
@@ -236,142 +229,56 @@ export default function HouseOne() {
             </nav>
 
             <main className="flex-1 space-y-24">
-                <section className="space-y-10">
-                    <div>
-                        <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-                            Penev GuestHouse – Къща 1
-                        </h1>
-                        <p className="text-gray-600 dark:text-gray-300 max-w-3xl">
-                            Цяла ваканционна къща с площ <strong>170 m²</strong>
-                            , включваща всекидневна, 3 спални и 2 бани.
-                            Самостоятелен вход, тишина и панорамна гледка към
-                            езерото, градината и планината.
-                        </p>
-                    </div>
-
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
-                        <Info
-                            icon={<Home size={16} />}
-                            text="Цяла къща – 170 m²"
-                        />
-                        <Info icon={<Wifi size={16} />} text="Безплатен WiFi" />
-                        <Info icon={<Sun size={16} />} text="Балкон и тераса" />
-                        <Info
-                            icon={<Mountain size={16} />}
-                            text="Гледка към езеро и планина"
-                        />
-                        <Info icon={<Bath size={16} />} text="2 бани" />
-                        <Info
-                            icon={<DoorClosed size={16} />}
-                            text="Самостоятелен вход"
-                        />
-                    </div>
-                </section>
-
-                <section className="space-y-12">
-                    <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">
-                        Удобства
-                    </h2>
-
-                    <Amenities
-                        title="В къщата"
-                        items={[
-                            ["Климатик", Sun],
-                            ["Телевизор с кабелни канали", Tv],
-                            ["Пералня", WashingMachine],
-                            ["Шумоизолация", VolumeX],
-                            ["Барбекю", Flame],
-                        ]}
-                    />
-
-                    <Amenities
-                        title="Самостоятелна кухня"
-                        items={[
-                            ["Хладилник", Refrigerator],
-                            ["Кухненски прибори", Utensils],
-                            ["Микровълнова фурна", Microwave],
-                            ["Кафе машина", Coffee],
-                            ["Фурна и котлони", Utensils],
-                        ]}
-                    />
-                </section>
-
-                {sections.map((s) => (
+                {houseOneSections.map((s) => (
                     <RoomSection key={s.id} {...s} />
                 ))}
             </main>
         </div>
     );
+}
 
-    function Info({ icon, text }) {
-        return (
-            <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                {icon}
-                {text}
-            </div>
-        );
-    }
+function RoomSection({ id, label, description, descriptionIcons }) {
+    const images = loadImagesBySection(id);
+    const [activeIndex, setActiveIndex] = useState(null);
 
-    function Amenities({ title, items }) {
-        return (
-            <div>
-                <h3 className="font-semibold mb-4 text-gray-900 dark:text-white">
-                    {title}
-                </h3>
-                <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-gray-700 dark:text-gray-300">
-                    {items.map(([label, Icon], i) => (
-                        <li key={i} className="flex gap-2 items-center">
-                            <Icon size={16} /> {label}
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        );
-    }
+    if (!images.length) return null;
 
-    function RoomSection({ id, label, description, descriptionIcons }) {
-        const images = loadImagesBySection(id);
-        const [activeIndex, setActiveIndex] = useState(null);
-
-        if (!images.length) return null;
-
-        return (
-            <section id={id} className="scroll-mt-28">
-                <div className="grid lg:grid-cols-2 gap-10 items-start">
-                    <div>
-                        <h2 className="text-3xl font-semibold mb-4 text-gray-900 dark:text-white">
-                            {label}
-                        </h2>
-                        <p className="text-gray-700 dark:text-gray-300 mb-4">
-                            {description}
-                        </p>
-                        <div className="flex gap-3 text-gray-500 dark:text-gray-400">
-                            {descriptionIcons.map((Icon, i) => (
-                                <span key={i}>{Icon}</span>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-4">
-                        {images.map((src, i) => (
-                            <ImagePreview
-                                key={i}
-                                src={src}
-                                alt={label}
-                                onClick={() => setActiveIndex(i)}
-                            />
+    return (
+        <section id={id} className="scroll-mt-28">
+            <div className="grid lg:grid-cols-2 gap-10 items-start">
+                <div>
+                    <h2 className="text-3xl font-semibold mb-4 text-gray-900 dark:text-white">
+                        {label}
+                    </h2>
+                    <p className="text-gray-700 dark:text-gray-300 mb-4">
+                        {description}
+                    </p>
+                    <div className="flex gap-3 text-gray-500 dark:text-gray-400">
+                        {descriptionIcons.map((Icon, i) => (
+                            <span key={i}>{Icon}</span>
                         ))}
                     </div>
                 </div>
 
-                {activeIndex !== null && (
-                    <ImageModal
-                        images={images}
-                        activeIndex={activeIndex}
-                        setActiveIndex={setActiveIndex}
-                    />
-                )}
-            </section>
-        );
-    }
+                <div className="grid grid-cols-2 gap-4">
+                    {images.map((src, i) => (
+                        <ImagePreview
+                            key={i}
+                            src={src}
+                            alt={label}
+                            onClick={() => setActiveIndex(i)}
+                        />
+                    ))}
+                </div>
+            </div>
+
+            {activeIndex !== null && (
+                <ImageModal
+                    images={images}
+                    activeIndex={activeIndex}
+                    setActiveIndex={setActiveIndex}
+                />
+            )}
+        </section>
+    );
 }
