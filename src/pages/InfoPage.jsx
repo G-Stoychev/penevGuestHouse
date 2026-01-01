@@ -7,23 +7,59 @@ export default function PricesInfo() {
                 </h1>
 
                 <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-8 mb-10 transition-colors duration-300">
-                    <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
+                    <h2 className="text-2xl font-semibold mb-6  text-gray-900 dark:text-white">
                         Цени за нощувка
                     </h2>
-                    <ul className="space-y-4 text-gray-700 dark:text-gray-300">
-                        <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
-                            <span>Къща 1 (до 8 гости)</span>
-                            <span className="font-medium">350 лв./ €179</span>
-                        </li>
-                        <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
-                            <span>Къща 2 (до 8 гости)</span>
-                            <span className="font-medium">350 лв./ €179</span>
-                        </li>
-                        <li className="flex justify-between">
-                            <span>Двете къщи заедно</span>
-                            <span className="font-medium">700лв / €357.90</span>
-                        </li>
-                    </ul>
+                    <div>
+                        <h3 className="text-xl font-semibold mb-6 text-center text-gray-900 dark:text-white">
+                            Делнични цени
+                        </h3>
+                        <ul className="space-y-4 text-gray-700 dark:text-gray-300">
+                            <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
+                                <span>Къща 1 (до 8 гости)</span>
+                                <span className="font-medium">
+                                    €179/ 350 лв.
+                                </span>
+                            </li>
+                            <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
+                                <span>Къща 2 (до 8 гости)</span>
+                                <span className="font-medium">
+                                    €179/ 350 лв.
+                                </span>
+                            </li>
+                            <li className="flex justify-between">
+                                <span>Двете къщи заедно</span>
+                                <span className="font-medium">
+                                    €358 / 700 лв.
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 className="text-xl font-semibold mb-6 text-center text-gray-900 dark:text-white">
+                            Уикенд цени
+                        </h3>
+                        <ul className="space-y-4 text-gray-700 dark:text-gray-300">
+                            <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
+                                <span>Къща 1 (до 8 гости)</span>
+                                <span className="font-medium">
+                                    €199 / 389 лв
+                                </span>
+                            </li>
+                            <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
+                                <span>Къща 2 (до 8 гости)</span>
+                                <span className="font-medium">
+                                    €199 / 389 лв
+                                </span>
+                            </li>
+                            <li className="flex justify-between">
+                                <span>Двете къщи заедно</span>
+                                <span className="font-medium">
+                                    €390 / 762 лв.
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
                     <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
                         * Цените са ориентировъчни и могат да варират според
                         сезона и продължителността на престоя.

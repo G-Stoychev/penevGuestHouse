@@ -31,24 +31,32 @@ export default function Footer() {
                         <div className="flex justify-center md:justify-start gap-4">
                             <a
                                 href="https://www.facebook.com/profile.php?id=61568758135858"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="hover:underline"
                             >
                                 Facebook
                             </a>
                             <a
                                 href="https://www.instagram.com/penev_guesthouse/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="hover:underline"
                             >
                                 Instagram
                             </a>
                             <a
                                 href="https://www.booking.com/hotel/bg/penev-gust-house.bg.html"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="hover:underline"
                             >
                                 Booking
                             </a>
                             <a
                                 href=" https://vila.bg/house-penev-6928.html"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="hover:underline"
                             >
                                 Vila.bg
@@ -65,6 +73,8 @@ export default function Footer() {
                         </a>
                         <a
                             href="https://www.booking.com/hotel/bg/penev-gust-house.bg.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-block bg-white text-black px-6 py-3 rounded-xl font-medium"
                         >
                             Booking

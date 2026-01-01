@@ -49,7 +49,7 @@ const sections = [
         label: "Всекидневна",
         description:
             "Просторна и светла всекидневна, подходяща за отдих и приятни моменти с близки и приятели. Комфортното обзавеждане и спокойната обстановка я правят идеално място за почивка. Всекидневна: разтегателен диван",
-        icon: <Sofa size={16} />,
+        icon: <Sofa size={18} />,
         descriptionIcons: [
             <Sun size={18} />,
             <Sofa size={18} />,
@@ -61,8 +61,7 @@ const sections = [
         label: "Спалня 1",
         description:
             "Просторна спалня с екстра голямо двойно легло и внимателно подбран интериор, създаващ усещане за стил и домашен уют.",
-
-        icon: <Bed size={16} />,
+        icon: <BedDouble size={18} />,
         descriptionIcons: [
             <BedDouble size={18} />,
             <Sun size={18} />,
@@ -77,8 +76,7 @@ const sections = [
         label: "Спалня 2",
         description:
             "Комфортна спалня с голямо двойно легло и спокойна атмосфера, осигуряваща идеални условия за пълноценна почивка и релакс.",
-
-        icon: <BedDouble size={16} />,
+        icon: <BedDouble size={18} />,
         descriptionIcons: [
             <BedDouble size={18} />,
             <Sun size={18} />,
@@ -93,7 +91,7 @@ const sections = [
         label: "Спалня 3",
         description:
             "Уютна спалня с две единични легла, подходяща за семейства или приятели, предлагаща комфортна обстановка за спокоен сън и пълноценна почивка.",
-        icon: <BedDouble size={16} />,
+        icon: <Bed size={18} />,
         descriptionIcons: [
             <BedDouble size={18} />,
             <Sun size={18} />,
@@ -108,7 +106,7 @@ const sections = [
         label: "Тераса",
         description:
             "Тераса с възможност за отдих на открито – идеална за сутрешно кафе или вечерна чаша вино, където можете да се насладите на тишината, свежия въздух и красивата околна природа.",
-        icon: <Sun size={16} />,
+        icon: <Sun size={18} />,
         descriptionIcons: [
             <Sun size={18} />,
             <Coffee size={18} />,
@@ -116,7 +114,6 @@ const sections = [
             <Sunset size={18} />,
             <Mountain size={18} />,
             <Home size={18} />,
-            <Coffee size={18} />,
         ],
     },
     {
@@ -124,7 +121,7 @@ const sections = [
         label: "Гледка",
         description:
             "Къщата предлага впечатляваща гледка към езерото, градината и планината, съчетавайки спокойствие, чист въздух и усещане за пълна релаксация сред природата.",
-        icon: <Mountain size={16} />,
+        icon: <Mountain size={18} />,
         descriptionIcons: [<Mountain size={14} />, <Sun size={14} />],
     },
 ];
@@ -236,11 +233,11 @@ export default function HouseOne() {
                 </div>
             </nav>
 
-            <main className="flex-1 space-y-24 ">
+            <main className="flex-1 space-y-12 ">
                 <section className="space-y-10">
                     <div>
                         <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-                            Penev GuestHouse – Къща 1
+                            Penev GuestHouse – Къща 2
                         </h1>
                         <p className="text-gray-600 dark:text-gray-300 max-w-3xl">
                             Цяла ваканционна къща с площ <strong>170 m²</strong>
@@ -269,7 +266,7 @@ export default function HouseOne() {
                     </div>
                 </section>
 
-                <section className="space-y-12">
+                <section className="space-y-5">
                     <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">
                         Удобства
                     </h2>
@@ -317,10 +314,10 @@ function Info({ icon, text }) {
 function Amenities({ title, items }) {
     return (
         <div>
-            <h3 className="font-semibold mb-4 text-gray-900 dark:text-white">
+            <h3 className="font-semibold mb-2 text-gray-900 dark:text-white">
                 {title}
             </h3>
-            <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-gray-700 dark:text-gray-300">
+            <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-1 text-gray-700 dark:text-gray-300">
                 {items.map(([label, Icon], i) => (
                     <li key={i} className="flex gap-2 items-center">
                         <Icon size={16} /> {label}

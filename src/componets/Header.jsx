@@ -92,6 +92,8 @@ export default function Header() {
                     </a>
                     <a
                         href="https://www.booking.com/hotel/bg/penev-gust-house.bg.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="bg-black text-white px-5 py-2 rounded-xl text-sm hover:bg-gray-800 transition dark:bg-white dark:text-black dark:hover:bg-gray-300"
                     >
                         Резервации
@@ -172,6 +174,8 @@ export default function Header() {
 
                         <a
                             href="https://www.booking.com/hotel/bg/penev-gust-house.bg.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="bg-black text-white px-5 py-2 rounded-xl text-center hover:bg-gray-800 transition dark:bg-white dark:text-black dark:hover:bg-gray-300"
                         >
                             Резервации

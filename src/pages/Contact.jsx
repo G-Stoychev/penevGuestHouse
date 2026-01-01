@@ -61,7 +61,7 @@ export default function Contacts() {
                                 Работно време
                             </h3>
                             <p className="text-gray-600 dark:text-gray-300">
-                                Всеки ден: 08:00 – 22:00
+                                Всеки ден: 08:00 – 20:00
                             </p>
                         </div>
                     </div>

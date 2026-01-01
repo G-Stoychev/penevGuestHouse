@@ -47,7 +47,7 @@ const sections = [
         label: "Всекидневна",
         description:
             "Просторна и светла всекидневна, подходяща за отдих и приятни моменти с близки и приятели. Комфортното обзавеждане и спокойната обстановка я правят идеално място за почивка. Всекидневна: разтегателен диван",
-        icon: <Sofa size={16} />,
+        icon: <Sofa size={18} />,
         descriptionIcons: [
             <Sun size={18} />,
             <Sofa size={18} />,
@@ -59,7 +59,7 @@ const sections = [
         label: "Спалня 1",
         description:
             "Просторна спалня с екстра голямо двойно легло и внимателно подбран интериор, създаващ усещане за стил и домашен уют.",
-        icon: <Bed size={16} />,
+        icon: <BedDouble size={18} />,
         descriptionIcons: [
             <BedDouble size={18} />,
             <Sun size={18} />,
@@ -74,7 +74,7 @@ const sections = [
         label: "Спалня 2",
         description:
             "Комфортна спалня с голямо двойно легло и спокойна атмосфера, осигуряваща идеални условия за пълноценна почивка и релакс.",
-        icon: <BedDouble size={16} />,
+        icon: <BedDouble size={18} />,
         descriptionIcons: [
             <BedDouble size={18} />,
             <Sun size={18} />,
@@ -89,7 +89,7 @@ const sections = [
         label: "Спалня 3",
         description:
             "Уютна спалня с две единични легла, подходяща за семейства или приятели, предлагаща комфортна обстановка за спокоен сън и пълноценна почивка.",
-        icon: <BedDouble size={16} />,
+        icon: <Bed size={18} />,
         descriptionIcons: [
             <BedDouble size={18} />,
             <Sun size={18} />,
@@ -104,7 +104,7 @@ const sections = [
         label: "Тераса",
         description:
             "Тераса с възможност за отдих на открито – идеална за сутрешно кафе или вечерна чаша вино, където можете да се насладите на тишината, свежия въздух и красивата околна природа.",
-        icon: <Sun size={16} />,
+        icon: <Sun size={18} />,
         descriptionIcons: [
             <Sun size={18} />,
             <Coffee size={18} />,
@@ -119,7 +119,7 @@ const sections = [
         label: "Гледка",
         description:
             "Къщата предлага впечатляваща гледка към езерото, градината и планината, съчетавайки спокойствие, чист въздух и усещане за пълна релаксация сред природата.",
-        icon: <Mountain size={16} />,
+        icon: <Mountain size={18} />,
         descriptionIcons: [<Mountain size={14} />, <Sun size={14} />],
     },
 ];
@@ -184,7 +184,6 @@ export default function HouseOne() {
 
     return (
         <div className="max-w-7xl mx-auto px-4 py-12 flex gap-10 text-gray-900 dark:text-gray-200">
-            {/* DESKTOP ASIDE */}
             <aside className="hidden lg:block w-64 sticky top-28 h-fit">
                 <nav className="space-y-2 text-sm">
                     {houseOneSections.map((s) => (
@@ -204,7 +203,6 @@ export default function HouseOne() {
                 </nav>
             </aside>
 
-            {/* MOBILE NAV */}
             <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white dark:bg-gray-800 border-t dark:border-gray-700">
                 <div
                     className="flex gap-2 px-4 py-3 overflow-x-auto scroll-smooth"
@@ -228,11 +226,97 @@ export default function HouseOne() {
                 </div>
             </nav>
 
-            <main className="flex-1 space-y-24">
-                {houseOneSections.map((s) => (
+            <main className="flex-1 space-y-12 ">
+                <section className="space-y-10">
+                    <div>
+                        <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+                            Penev GuestHouse – Къща 1
+                        </h1>
+                        <p className="text-gray-600 dark:text-gray-300 max-w-3xl">
+                            Цяла ваканционна къща с площ <strong>170 m²</strong>
+                            , включваща всекидневна, 3 спални и 2 бани.
+                            Самостоятелен вход, тишина и панорамна гледка към
+                            езерото, градината и планината.
+                        </p>
+                    </div>
+
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+                        <Info
+                            icon={<Home size={16} />}
+                            text="Цяла къща – 170 m²"
+                        />
+                        <Info icon={<Wifi size={16} />} text="Безплатен WiFi" />
+                        <Info icon={<Sun size={16} />} text="Балкон и тераса" />
+                        <Info
+                            icon={<Mountain size={16} />}
+                            text="Гледка към езеро и планина"
+                        />
+                        <Info icon={<Bath size={16} />} text="2 бани" />
+                        <Info
+                            icon={<DoorClosed size={16} />}
+                            text="Самостоятелен вход"
+                        />
+                    </div>
+                </section>
+
+                <section className="space-y-5">
+                    <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">
+                        Удобства
+                    </h2>
+
+                    <Amenities
+                        title="В къщата"
+                        items={[
+                            ["Климатик", Sun],
+                            ["Телевизор с кабелни канали", Tv],
+                            ["Пералня", WashingMachine],
+                            ["Шумоизолация", VolumeX],
+                            ["Барбекю", Flame],
+                        ]}
+                    />
+
+                    <Amenities
+                        title="Самостоятелна кухня"
+                        items={[
+                            ["Хладилник", Refrigerator],
+                            ["Кухненски прибори", Utensils],
+                            ["Микровълнова фурна", Microwave],
+                            ["Кафе машина", Coffee],
+                            ["Фурна и котлони", Utensils],
+                        ]}
+                    />
+                </section>
+
+                {sections.map((s) => (
                     <RoomSection key={s.id} {...s} />
                 ))}
             </main>
+        </div>
+    );
+}
+
+function Info({ icon, text }) {
+    return (
+        <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+            {icon}
+            {text}
+        </div>
+    );
+}
+
+function Amenities({ title, items }) {
+    return (
+        <div>
+            <h3 className="font-semibold mb-2 text-gray-900 dark:text-white">
+                {title}
+            </h3>
+            <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-1 text-gray-700 dark:text-gray-300">
+                {items.map(([label, Icon], i) => (
+                    <li key={i} className="flex gap-2 items-center">
+                        <Icon size={16} /> {label}
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 }
