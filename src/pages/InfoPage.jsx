@@ -12,51 +12,75 @@ export default function PricesInfo() {
                     </h2>
                     <div>
                         <h3 className="text-xl font-semibold mb-6 text-center text-gray-900 dark:text-white">
-                            Делнични цени
+                            Делнични дни
                         </h3>
                         <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                             <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
                                 <span>Къща 1 (до 8 гости)</span>
-                                <span className="font-medium">
-                                    €179/ 350 лв.
-                                </span>
+                                <div>
+                                    <span className="font-medium ">€179/</span>
+                                    <span className="font-medium text-sm">
+                                        {" "}
+                                        350 лв.
+                                    </span>
+                                </div>
                             </li>
                             <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
                                 <span>Къща 2 (до 8 гости)</span>
-                                <span className="font-medium">
-                                    €179/ 350 лв.
-                                </span>
+                                <div>
+                                    <span className="font-medium ">€179/</span>
+                                    <span className="font-medium text-sm">
+                                        {" "}
+                                        350 лв.
+                                    </span>
+                                </div>
                             </li>
                             <li className="flex justify-between">
                                 <span>Двете къщи заедно</span>
-                                <span className="font-medium">
-                                    €358 / 700 лв.
-                                </span>
+                                <div>
+                                    <span className="font-medium ">€358 /</span>
+                                    <span className="font-medium text-sm">
+                                        {" "}
+                                        700 лв.
+                                    </span>
+                                </div>
                             </li>
                         </ul>
                     </div>
                     <div>
                         <h3 className="text-xl font-semibold mb-6 text-center text-gray-900 dark:text-white">
-                            Уикенд цени
+                            Уикенд
                         </h3>
                         <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                             <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
                                 <span>Къща 1 (до 8 гости)</span>
-                                <span className="font-medium">
-                                    €199 / 389 лв
-                                </span>
+                                <div>
+                                    <span className="font-medium "> €199/</span>
+                                    <span className="font-medium text-sm">
+                                        {" "}
+                                        389 лв.
+                                    </span>
+                                </div>
                             </li>
                             <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
                                 <span>Къща 2 (до 8 гости)</span>
-                                <span className="font-medium">
-                                    €199 / 389 лв
-                                </span>
+                                <div>
+                                    <span className="font-medium "> €199/</span>
+                                    <span className="font-medium text-sm">
+                                        {" "}
+                                        389 лв.
+                                    </span>
+                                </div>
                             </li>
                             <li className="flex justify-between">
                                 <span>Двете къщи заедно</span>
-                                <span className="font-medium">
-                                    €390 / 762 лв.
-                                </span>
+                                <div>
+                                    <span className="font-medium "> €390/</span>
+                                    <span className="font-medium text-sm">
+                                        {" "}
+                                        762 лв.
+                                    </span>
+                                </div>
                             </li>
                         </ul>
                     </div>
