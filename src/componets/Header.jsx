@@ -119,67 +119,69 @@ export default function Header() {
             </div>
 
             {mobileOpen && (
-                <div className="md:hidden bg-white shadow-lg dark:bg-gray-900 dark:shadow-md">
-                    <nav className="flex flex-col gap-2 px-4 py-4 border-b dark:border-gray-700">
-                        <NavLink
-                            to="/"
-                            onClick={() => setMobileOpen(false)}
-                            className="text-gray-600 hover:text-black"
-                        >
-                            Начало
-                        </NavLink>
-                        <NavLink
-                            to="/house-one"
-                            onClick={() => setMobileOpen(false)}
-                            className="text-gray-600 hover:text-black"
-                        >
-                            Къща 1
-                        </NavLink>
-                        <NavLink
-                            to="/house-two"
-                            onClick={() => setMobileOpen(false)}
-                            className="text-gray-600 hover:text-black"
-                        >
-                            Къща 2
-                        </NavLink>
-                        <NavLink
-                            to="/gallery"
-                            className="text-gray-600 hover:text-black"
-                        >
-                            Галерия
-                        </NavLink>
-                        <NavLink
-                            to="/information"
-                            onClick={() => setMobileOpen(false)}
-                            className="text-gray-600 hover:text-black"
-                        >
-                            Цени и настаняване
-                        </NavLink>
-                        <NavLink
-                            to="/contacts"
-                            onClick={() => setMobileOpen(false)}
-                            className="text-gray-600 hover:text-black"
-                        >
-                            Контакти
-                        </NavLink>
-                    </nav>
-                    ;
-                    <div className="flex flex-col px-4 py-4 gap-2">
-                        <a
-                            href="tel:+359883208308"
-                            className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white"
-                        >
-                            Телефон: +359 883 208 308
-                        </a>
+                <div className="h-screen">
+                    <div className="md:hidden bg-white shadow-lg dark:bg-gray-900 dark:shadow-md ">
+                        <nav className="flex  font-medium flex-col gap-7 px-4 py-4 border-b dark:border-gray-700">
+                            <NavLink
+                                to="/"
+                                onClick={() => setMobileOpen(false)}
+                                className="text-gray-600 hover:text-black"
+                            >
+                                Начало
+                            </NavLink>
+                            <NavLink
+                                to="/house-one"
+                                onClick={() => setMobileOpen(false)}
+                                className="text-gray-600 hover:text-black"
+                            >
+                                Къща 1
+                            </NavLink>
+                            <NavLink
+                                to="/house-two"
+                                onClick={() => setMobileOpen(false)}
+                                className="text-gray-600 hover:text-black"
+                            >
+                                Къща 2
+                            </NavLink>
+                            <NavLink
+                                to="/gallery"
+                                className="text-gray-600 hover:text-black"
+                            >
+                                Галерия
+                            </NavLink>
+                            <NavLink
+                                to="/information"
+                                onClick={() => setMobileOpen(false)}
+                                className="text-gray-600 hover:text-black"
+                            >
+                                Цени и настаняване
+                            </NavLink>
+                            <NavLink
+                                to="/contacts"
+                                onClick={() => setMobileOpen(false)}
+                                className="text-gray-600 hover:text-black"
+                            >
+                                Контакти
+                            </NavLink>
+                        </nav>
 
-                        <a
-                            href="https://www.booking.com/hotel/bg/penev-gust-house.bg.html"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-black text-white px-5 py-2 rounded-xl text-center hover:bg-gray-800 transition dark:bg-white dark:text-black dark:hover:bg-gray-300"
-                        >
-                            Резервации
-                        </a>
+                        <div className="flex flex-col px-4 py-4 gap-2">
+                            <a
+                                href="tel:+359883208308"
+                                className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white"
+                            >
+                                Телефон: +359 883 208 308
+                            </a>
+
+                            <a
+                                href="https://www.booking.com/hotel/bg/penev-gust-house.bg.html"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-black text-white px-5 py-2 rounded-xl text-center hover:bg-gray-800 transition dark:bg-white dark:text-black dark:hover:bg-gray-300"
+                            >
+                                Резервации
+                            </a>
+                        </div>
                     </div>
                 </div>
             )}
