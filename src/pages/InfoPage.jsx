@@ -18,31 +18,13 @@ export default function PricesInfo() {
                             <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
                                 <span>Къща 1 (до 8 гости)</span>
                                 <div>
-                                    <span className="font-medium ">€179/</span>
-                                    <span className="font-medium text-sm">
-                                        {" "}
-                                        350 лв.
-                                    </span>
+                                    <span className="font-medium ">€180</span>
                                 </div>
                             </li>
                             <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
                                 <span>Къща 2 (до 8 гости)</span>
                                 <div>
-                                    <span className="font-medium ">€179/</span>
-                                    <span className="font-medium text-sm">
-                                        {" "}
-                                        350 лв.
-                                    </span>
-                                </div>
-                            </li>
-                            <li className="flex justify-between">
-                                <span>Двете къщи заедно</span>
-                                <div>
-                                    <span className="font-medium ">€358 /</span>
-                                    <span className="font-medium text-sm">
-                                        {" "}
-                                        700 лв.
-                                    </span>
+                                    <span className="font-medium ">€180</span>
                                 </div>
                             </li>
                         </ul>
@@ -55,41 +37,27 @@ export default function PricesInfo() {
                             <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
                                 <span>Къща 1 (до 8 гости)</span>
                                 <div>
-                                    <span className="font-medium "> €199/</span>
-                                    <span className="font-medium text-sm">
-                                        {" "}
-                                        389 лв.
-                                    </span>
+                                    <span className="font-medium "> €230</span>
                                 </div>
                             </li>
                             <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
                                 <span>Къща 2 (до 8 гости)</span>
                                 <div>
-                                    <span className="font-medium "> €199/</span>
-                                    <span className="font-medium text-sm">
-                                        {" "}
-                                        389 лв.
-                                    </span>
-                                </div>
-                            </li>
-                            <li className="flex justify-between">
-                                <span>Двете къщи заедно</span>
-                                <div>
-                                    <span className="font-medium "> €390/</span>
-                                    <span className="font-medium text-sm">
-                                        {" "}
-                                        762 лв.
-                                    </span>
+                                    <span className="font-medium "> €230</span>
                                 </div>
                             </li>
                         </ul>
                     </div>
+
                     <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
-                        * Цените са ориентировъчни и могат да варират според
-                        сезона и продължителността на престоя.
+                        * Цените се коригират спрямо сезона и периода на
+                        престоя. За престои с повече от 2 нощувки предлагаме
+                        индивидуални отстъпки.
                     </p>
                     <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
-                        * Къщите се отдават минимум за 2 нощувки.
+                        * Условията за наем на двете къщи заедно се уточняват
+                        допълнително след запитване, за да предложим оптимално
+                        решение според вашия престой.
                     </p>
                 </div>
 

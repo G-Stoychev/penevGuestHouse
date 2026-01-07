@@ -119,7 +119,7 @@ export default function Header() {
             </div>
 
             {mobileOpen && (
-                <div className="h-screen">
+                <div className=" md:hidden h-screen">
                     <div className="md:hidden bg-white shadow-lg dark:bg-gray-900 dark:shadow-md ">
                         <nav className="flex  font-medium flex-col gap-7 px-4 py-4 border-b dark:border-gray-700">
                             <NavLink
@@ -145,6 +145,7 @@ export default function Header() {
                             </NavLink>
                             <NavLink
                                 to="/gallery"
+                                onClick={() => setMobileOpen(false)}
                                 className="text-gray-600 hover:text-black"
                             >
                                 Галерия

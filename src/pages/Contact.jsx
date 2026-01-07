@@ -49,7 +49,7 @@ export default function Contacts() {
                                 Имейл
                             </h3>
                             <p className="text-gray-600 dark:text-gray-300">
-                                info@penevguesthouse.bg
+                                plamen0709@gmail.com
                             </p>
                         </div>
                     </div>
