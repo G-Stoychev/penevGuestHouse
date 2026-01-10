@@ -1,12 +1,12 @@
 export default function PricesInfo() {
     return (
-        <main className="bg-gray-50 dark:bg-gray-900 min-h-screen transition-colors duration-300">
+        <main className=" min-h-screen transition-colors duration-300">
             <section className="max-w-5xl mx-auto px-4 py-16">
                 <h1 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
                     Цени и Информация
                 </h1>
 
-                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-8 mb-10 transition-colors duration-300">
+                <div className="bg-white/60 dark:bg-gray-800 rounded-2xl shadow-sm p-8 mb-10 transition-colors duration-300">
                     <h2 className="text-2xl font-semibold mb-6  text-gray-900 dark:text-white">
                         Цени за нощувка
                     </h2>
@@ -61,7 +61,7 @@ export default function PricesInfo() {
                     </p>
                 </div>
 
-                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-8 mb-10 transition-colors duration-300">
+                <div className="bg-white/60 dark:bg-gray-800 rounded-2xl shadow-sm p-8 mb-10 transition-colors duration-300">
                     <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
                         Настаняване и Напускане
                     </h2>
@@ -89,7 +89,7 @@ export default function PricesInfo() {
                     </div>
                 </div>
 
-                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-8 transition-colors duration-300">
+                <div className="bg-white/60 dark:bg-gray-800 rounded-2xl shadow-sm p-8 transition-colors duration-300">
                     <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
                         Допълнителна информация
                     </h2>

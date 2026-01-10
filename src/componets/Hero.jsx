@@ -21,7 +21,7 @@ export default function Hero() {
                 </p>
                 <a
                     href="#houses"
-                    className="inline-block bg-white dark:bg-gray-200 text-black dark:text-black px-8 py-3 rounded-2xl font-medium hover:bg-gray-100 dark:hover:bg-white transition-colors duration-300"
+                    className="bg-gradient-to-r from-violet-200 to-sky-200 hover:from-violet-300 hover:to-sky-300 dark:from-gray-100 dark:to-gray-200 dark:hover:from-gray-200 dark:hover:to-gray-400 text-black px-8 py-3 rounded-2xl font-medium transition-all duration-300"
                 >
                     Виж къщите
                 </a>

@@ -16,16 +16,14 @@ function App() {
         <>
             <Header />
             <ScrollToTop />
-            <div className="bg-gray-50 dark:bg-gray-900 min-h-screen transition-colors duration-300">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/house-one" element={<HouseOne />} />
-                    <Route path="/house-two" element={<HouseTwo />} />
-                    <Route path="/gallery" element={<Gallery />} />
-                    <Route path="/information" element={<InfoPage />} />
-                    <Route path="/contacts" element={<Contacts />} />
-                </Routes>
-            </div>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/house-one" element={<HouseOne />} />
+                <Route path="/house-two" element={<HouseTwo />} />
+                <Route path="/gallery" element={<Gallery />} />
+                <Route path="/information" element={<InfoPage />} />
+                <Route path="/contacts" element={<Contacts />} />
+            </Routes>
             <Footer />
         </>
     );

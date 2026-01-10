@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function HouseCard({ title, image, link }) {
     return (
-        <div className="rounded-2xl overflow-hidden shadow-md dark:shadow-none bg-white dark:bg-gray-800 hover:shadow-lg transition-shadow duration-300">
+        <div className="rounded-2xl overflow-hidden shadow-md dark:shadow-none bg-white/30 dark:bg-gray-800 hover:shadow-lg hover:cursor-pointer transition-shadow duration-300">
             <img src={image} alt={title} className="h-56 w-full object-cover" />
             <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
