@@ -18,13 +18,13 @@ export default function PricesInfo() {
                             <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
                                 <span>Къща 1 (до 8 гости)</span>
                                 <div>
-                                    <span className="font-medium ">€180</span>
+                                    <span className="font-medium ">€175</span>
                                 </div>
                             </li>
                             <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
                                 <span>Къща 2 (до 8 гости)</span>
                                 <div>
-                                    <span className="font-medium ">€180</span>
+                                    <span className="font-medium ">€175</span>
                                 </div>
                             </li>
                         </ul>
@@ -37,13 +37,13 @@ export default function PricesInfo() {
                             <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
                                 <span>Къща 1 (до 8 гости)</span>
                                 <div>
-                                    <span className="font-medium "> €230</span>
+                                    <span className="font-medium "> €222</span>
                                 </div>
                             </li>
                             <li className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-2">
                                 <span>Къща 2 (до 8 гости)</span>
                                 <div>
-                                    <span className="font-medium "> €230</span>
+                                    <span className="font-medium "> €225</span>
                                 </div>
                             </li>
                         </ul>
